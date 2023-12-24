@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond", serif;
+}
+
+.btn{
+  transition: all .25s;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  transform: scale(1.2);
+}
