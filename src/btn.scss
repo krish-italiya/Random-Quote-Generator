@@ -1,0 +1,46 @@
+button {
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  transition: 0.2s;
+  &::before {
+    content: "";
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: white;
+    transition: 0.4s;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+  &:active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+span.ripple {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+  animation: ripple 0.5s linear forwards;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
